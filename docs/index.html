@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Scan</title>
 
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+
+  <meta name="theme-color" content="#0b0b0f" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>Stock Scan</h1>
+      <button id="uploadBtn">Upload CSV</button>
+      <input type="file" id="fileInput" accept=".csv" hidden />
+    </header>
+
+    <section id="filters">
+      <select id="makeFilter">
+        <option value="">All Makes</option>
+      </select>
+      <span class="lock">Condition: NEW</span>
+    </section>
+
+    <section id="status">
+      <div class="card">
+        <span>Scanned</span>
+        <strong id="scannedCount">0</strong>
+      </div>
+      <div class="card">
+        <span>Remaining</span>
+        <strong id="remainingCount">0</strong>
+      </div>
+      <div class="card">
+        <span>Expected</span>
+        <strong id="expectedCount">0</strong>
+      </div>
+    </section>
+
+    <section id="message">No file loaded</section>
+
+    <button id="cameraBtn">📷</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
